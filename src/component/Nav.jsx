@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 const Nav = ({ setOpen, open }) => {
   return (
-    <header className="bg-main sm:flex  relative px-4 sm:py-4 sm:px-5 py-3">
+    <header className="bg-main fixed w-full z-20 top sm:flex   px-4 sm:py-4 sm:px-5 py-3">
       <div className="wrapper  flex justify-between  items-center">
         <div className="">
           <img
             src="https://cdn.prod.website-files.com/635273ea37c256ef2835d522/63f35d11461fa083cbe695de_Logo%20white.svg"
             alt=""
-            className="h-6 sm:h-10"
+            className="h-6 sm:h-8"
           />
         </div>
         <div
@@ -43,7 +43,7 @@ const Nav = ({ setOpen, open }) => {
           !open ? "translate-y-[-150%] " : "translate-y-0  "
         } mt-[10px] sm:translate-y-0 pb-3 sm:p-0  `}
       >
-        <div className="pt-4 sm:p-0 sm:flex gap-6  sm:m-auto">
+        <div className="pt-4 sm:pl-20 sm:p-0 sm:flex gap-6  sm:m-auto">
           <a
             className=" sm:text-[16px] block hover:text-zinc-300 sm:p-0  transition-colors  p-2  uppercase  text-center font-[700] text-offwhite text-[14px]"
             href="#"
@@ -67,7 +67,7 @@ const Nav = ({ setOpen, open }) => {
           </a>
         </div>
 
-        <div className="sm:flex  sm:gap-6 ">
+        <div className="sm:flex  sm:gap-2 ">
           <a
             className="block  sm:px-4 sm:py-3  sm:rounded-[10px] sm:border-[1px] sm:border-zinc-300 hover:text-zinc-300 sm:p-0  transition-colors  p-2 uppercase  text-center  font-[700] text-offwhite text-[14px]"
             href="#"
