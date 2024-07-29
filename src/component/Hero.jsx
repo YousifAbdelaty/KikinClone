@@ -5,9 +5,7 @@ const variants = {
     opacity: 0,
     y: 100,
   },
-  initial2: {
-    opacity: 0,
-  },
+
   animate: (i) => ({
     opacity: 1,
     y: 0,
@@ -16,18 +14,11 @@ const variants = {
       delay: 0.35 * i,
     },
   }),
-  show: (i) => ({
-    opacity: 1,
-    transition: {
-      duration: 0.25,
-      delay: 0.45 * i,
-    },
-  }),
 };
 
 const Hero = () => {
   return (
-    <main className="flex  bg-main flex-col justify-between items-center  pt-20">
+    <main className="flex   overflow-hidden bg-main flex-col justify-between items-center  pt-20">
       <div className=" z-10 flex flex-col justify-between gap-6 items-center ">
         <div>
           <motion.h1
@@ -50,7 +41,18 @@ const Hero = () => {
           </motion.h1>
         </div>
         <motion.div
-          variants={variants}
+          variants={{
+            initial2: {
+              opacity: 0,
+            },
+            show: (i) => ({
+              opacity: 1,
+              transition: {
+                duration: 0.25,
+                delay: 0.45 * i,
+              },
+            }),
+          }}
           custom={3}
           animate="show"
           initial="initial2"
